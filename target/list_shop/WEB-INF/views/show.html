@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+
+</head>
+<body>
+
+<div th:each="thing : ${things}">
+  <h3 th:utext="${thing.getName()}">VALUE</h3>
+  <a th:href="@{/change/{id}(id=${thing.getId()})}" th:utext="${thing.getBought()}" >g</a>
+  <br>
+  <a th:href="@{/del/{id}(id=${thing.getId()})}">   удалить из списка     </a>
+
+
+</div>
+<h2><a href="/list_shop_war/new">list</a></h2>
+</body>
+</html>
